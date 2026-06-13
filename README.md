@@ -1,8 +1,10 @@
 # learn-python
 
-A hands-on Python course for developers coming from other languages (Go, Java, TypeScript, etc.). Each file is a self-contained exercise that implements a concept from scratch with inline explanations and runnable examples.
+A hands-on Python course for developers coming from Go. Each file is a self-contained exercise that implements a concept from scratch with inline explanations and runnable examples.
 
-The course starts with Python fundamentals and language-specific features, then builds into data structures, algorithm patterns, and applied interview topics. Designed to be useful both as a study guide for tech interviews and as a reference for Python idioms you'll encounter in production codebases.
+If you already write Go, you know static typing, interfaces, goroutines, and explicit error handling. This course focuses on where Python diverges: dynamic typing, duck typing, generators, decorators, comprehensions, and the patterns that make idiomatic Python feel very different from idiomatic Go. Where a Go comparison clarifies a concept, we draw the parallel directly.
+
+The course starts with Python fundamentals and language-specific features, then builds into data structures, algorithm patterns, and applied interview topics. Designed as both a study guide for tech interviews and a reference for Python idioms you'll encounter in production codebases.
 
 ## Setup
 
