@@ -33,19 +33,19 @@ Core language features and Python 3 idioms that differentiate Python from other 
 | # | File | Topic | Status |
 |---|------|-------|--------|
 | 1 | 01_hello.py | Hello world, interpreter basics | Done |
-| 2 | 02_types_and_variables.py | Dynamic typing, type hints, mutability | |
-| 3 | 03_strings.py | f-strings, slicing, common methods | |
-| 4 | 04_collections.py | Lists, tuples, sets, dicts, unpacking | |
-| 5 | 05_comprehensions.py | List/dict/set comprehensions, generator expressions | |
-| 6 | 06_functions.py | First-class functions, *args/**kwargs, closures | |
-| 7 | 07_classes.py | OOP, dunder methods, dataclasses, protocols | |
-| 8 | 08_iterators_generators.py | Iterators, generators, yield, lazy evaluation | |
-| 9 | 09_decorators.py | Function/class decorators, functools | |
-| 10 | 10_context_managers.py | with statement, contextlib, resource management | |
-| 11 | 11_error_handling.py | Exceptions, custom errors, EAFP vs LBYL | |
-| 12 | 12_pattern_matching.py | Structural pattern matching (match/case, Python 3.10+) | |
-| 13 | 13_typing.py | Type annotations, generics, TypeVar, Protocol | |
-| 14 | 14_concurrency.py | asyncio, threading, multiprocessing overview | |
+| 2 | 02_types_and_variables.py | Dynamic typing, type hints, mutability | Done |
+| 3 | 03_strings.py | f-strings, slicing, common methods | Done |
+| 4 | 04_collections.py | Lists, tuples, sets, dicts, unpacking | Done |
+| 5 | 05_comprehensions.py | List/dict/set comprehensions, generator expressions | Done |
+| 6 | 06_functions.py | First-class functions, *args/**kwargs, closures | Done |
+| 7 | 07_classes.py | OOP, dunder methods, dataclasses, protocols | Done |
+| 8 | 08_iterators_generators.py | Iterators, generators, yield, lazy evaluation | Done |
+| 9 | 09_decorators.py | Function/class decorators, functools | Done |
+| 10 | 10_context_managers.py | with statement, contextlib, resource management | Done |
+| 11 | 11_error_handling.py | Exceptions, custom errors, EAFP vs LBYL | Done |
+| 12 | 12_pattern_matching.py | Structural pattern matching (match/case, Python 3.10+) | Done |
+| 13 | 13_typing.py | Type annotations, generics, TypeVar, Protocol | Done |
+| 14 | 14_concurrency.py | asyncio, threading, multiprocessing overview | Done |
 
 ### `02_data_structures/` - Core Data Structures
 
@@ -55,11 +55,11 @@ Implementations from scratch to understand how they work under the hood.
 |---|------|-------|--------|
 | 1 | 01_stacks.py | Stacks (LIFO) | Done |
 | 2 | 02_queues.py | Queues (FIFO, deque, priority) | Done |
-| 3 | 03_linked_lists.py | Linked Lists (singly, doubly, cycle detection) | |
-| 4 | 04_hash_maps.py | Hash Maps (collision handling, design) | |
+| 3 | 03_linked_lists.py | Linked Lists (singly, doubly, cycle detection) | Done |
+| 4 | 04_hash_maps.py | Hash Maps (collision handling, design) | Done |
 | 5 | 05_binary_trees.py | Binary Trees (traversal, BST, balancing) | Done |
-| 6 | 06_heaps.py | Heaps and Priority Queues | |
-| 7 | 07_tries.py | Tries (prefix trees, autocomplete) | |
+| 6 | 06_heaps.py | Heaps and Priority Queues | Done |
+| 7 | 07_tries.py | Tries (prefix trees, autocomplete) | Done |
 | 8 | 08_graphs.py | Graphs (adjacency list, BFS/DFS) | Done |
 
 ### `03_algorithm_patterns/` - Problem-Solving Techniques

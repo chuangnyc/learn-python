@@ -1,5 +1,7 @@
 # Simple Graph
 
+from collections import deque
+
 # Representing the graph as an adjacency list
 #     A
 #    / \
@@ -41,7 +43,35 @@ def dfs_recursive(node, target, visited=None, path=None):
     path.pop()
     return None
 
-# Example: Find a path from node A to node E
+# BFS explores level by level (all immediate neighbors first, then theirs),
+# so the FIRST time it reaches the target it has used the fewest edges --
+# making it the go-to for SHORTEST-path problems. The only structural change
+# from DFS is the container: DFS dives deep via a stack (here, recursion's call
+# stack); BFS goes wide via a QUEUE (FIFO), pulling the oldest path first.
+def bfs(start, target):
+    visited = {start}              # mark on ENQUEUE so a node is queued only once
+    queue = deque([[start]])       # the queue holds whole PATHS, not bare nodes
+
+    while queue:
+        path = queue.popleft()     # popleft() = FIFO -- take the oldest path
+        node = path[-1]            # the node we're currently standing on
+
+        if node == target:         # first arrival == a shortest path
+            return path
+
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(path + [neighbor])  # extend path, enqueue it
+
+    return None                    # target unreachable from start
+
+# Example: Find a path from node A to node E with each strategy.
+# DFS dives down the first neighbor; BFS fans out by distance -- so they can
+# return DIFFERENT paths. BFS's is always shortest (fewest edges).
 if __name__ == "__main__":
-    path = dfs_recursive('A', 'E')
-    print("Path from A to E:", path)
+    dfs_path = dfs_recursive('A', 'E')
+    print("DFS path from A to E:", dfs_path)  # ['A', 'B', 'D', 'E'] (4 nodes)
+
+    bfs_path = bfs('A', 'E')
+    print("BFS path from A to E:", bfs_path)  # ['A', 'C', 'E']      (3 nodes)
