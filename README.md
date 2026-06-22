@@ -68,14 +68,14 @@ Common patterns that appear repeatedly in coding interviews.
 
 | # | File | Topic | Status |
 |---|------|-------|--------|
-| 1 | 01_two_pointers.py | Two Pointers (sorted arrays, palindromes) | |
-| 2 | 02_sliding_window.py | Sliding Window (subarrays, substrings) | |
-| 3 | 03_binary_search.py | Binary Search (sorted data, search space) | |
-| 4 | 04_recursion.py | Recursion and Backtracking (permutations, subsets) | |
-| 5 | 05_sorting.py | Sorting (merge sort, quick sort, comparators) | |
-| 6 | 06_dynamic_programming.py | Dynamic Programming (memoization, tabulation) | |
-| 7 | 07_greedy.py | Greedy Algorithms (intervals, scheduling) | |
-| 8 | 08_topological_sort.py | Topological Sort (DAGs, dependency resolution) | |
+| 1 | 01_two_pointers.py | Two Pointers (sorted arrays, palindromes) | Done |
+| 2 | 02_sliding_window.py | Sliding Window (subarrays, substrings) | Done |
+| 3 | 03_binary_search.py | Binary Search (sorted data, search space) | Done |
+| 4 | 04_recursion.py | Recursion and Backtracking (permutations, subsets) | Done |
+| 5 | 05_sorting.py | Sorting (merge sort, quick sort, comparators) | Done |
+| 6 | 06_dynamic_programming.py | Dynamic Programming (memoization, tabulation) | Done |
+| 7 | 07_greedy.py | Greedy Algorithms (intervals, scheduling) | Done |
+| 8 | 08_topological_sort.py | Topological Sort (DAGs, dependency resolution) | Done |
 
 ### `04_applied_topics/` - Interview Staples
 

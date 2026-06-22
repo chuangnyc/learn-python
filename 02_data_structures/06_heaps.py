@@ -48,7 +48,7 @@ class MinHeap:
 
     def _sift_up(self, i):
         while i > 0:
-            parent = (i - 1) // 2
+            parent = (i - 1) // 2 # // is integer division
             if self.data[i] < self.data[parent]:
                 self.data[i], self.data[parent] = self.data[parent], self.data[i]
                 i = parent              # keep climbing
