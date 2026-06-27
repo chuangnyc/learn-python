@@ -83,7 +83,7 @@ Frequently tested problem categories that combine multiple patterns.
 
 | # | File | Topic | Status |
 |---|------|-------|--------|
-| 1 | 01_strings.py | String Manipulation (anagrams, encoding) | |
-| 2 | 02_intervals.py | Intervals (merge, insert, overlap) | |
-| 3 | 03_matrix.py | Matrix Traversal (spiral, island problems) | |
-| 4 | 04_bit_manipulation.py | Bit Manipulation (masks, XOR tricks) | |
+| 1 | 01_strings.py | String Manipulation (anagrams, encoding) | Done |
+| 2 | 02_intervals.py | Intervals (merge, insert, overlap) | Done |
+| 3 | 03_matrix.py | Matrix Traversal (spiral, island problems) | Done |
+| 4 | 04_bit_manipulation.py | Bit Manipulation (masks, XOR tricks) | Done |
