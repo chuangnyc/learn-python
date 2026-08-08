@@ -1,0 +1,147 @@
+---
+title: "03 · Binary Search"
+---
+
+Binary search finds a target in sorted data by repeatedly halving the search
+range. Step through it below: pick a target, then move the slider to watch
+`low`, `high`, and `mid` narrow the range one comparison at a time.
+
+```{python}
+#| echo: false
+def binary_search_steps(nums, target):
+    steps = []
+    low, high = 0, len(nums) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        val = nums[mid]
+        if val == target:
+            steps.append({
+                "low": low, "high": high, "mid": mid,
+                "desc": f"nums[{mid}] = {val} equals target {target} — found!",
+            })
+            return steps, mid
+        elif val < target:
+            steps.append({
+                "low": low, "high": high, "mid": mid,
+                "desc": f"nums[{mid}] = {val} < target {target} → search the right half.",
+            })
+            low = mid + 1
+        else:
+            steps.append({
+                "low": low, "high": high, "mid": mid,
+                "desc": f"nums[{mid}] = {val} > target {target} → search the left half.",
+            })
+            high = mid - 1
+    steps.append({
+        "low": low, "high": high, "mid": None,
+        "desc": f"low ({low}) > high ({high}) — search space exhausted, target {target} not found.",
+    })
+    return steps, -1
+
+
+demo_nums = [1, 3, 5, 7, 9, 11, 14, 18, 21, 25]
+demo_targets = [21, 7, 6]  # found late, found early, not found
+
+scenarios = []
+for t in demo_targets:
+    steps, result = binary_search_steps(demo_nums, t)
+    scenarios.append({"target": t, "steps": steps, "result": result})
+
+bs_max_step = max(len(s["steps"]) for s in scenarios) - 1
+
+ojs_define(bs_nums=demo_nums, bs_scenarios=scenarios, bs_max_step=bs_max_step)
+```
+
+```{ojs}
+//| echo: false
+viewof bsTarget = Inputs.select(
+  bs_scenarios.map((s) => s.target),
+  { label: "Target", value: bs_scenarios[0].target }
+)
+```
+
+```{ojs}
+//| echo: false
+// Static range, independent of bsTarget/bsScenario -- a slider whose bounds
+// depend on another reactive input has to be torn down and rebuilt every time
+// that input changes, which is a common source of "the widget stops responding"
+// bugs. Keeping it static means it's built once; the render cell clamps instead.
+viewof bsStepIndex = Inputs.range(
+  [0, bs_max_step],
+  { step: 1, value: 0, label: "Step" }
+)
+```
+
+```{ojs}
+//| echo: false
+bsScenario = bs_scenarios.find((s) => s.target === bsTarget)
+```
+
+```{ojs}
+//| echo: false
+bsClampedStep = Math.min(bsStepIndex, bsScenario.steps.length - 1)
+```
+
+```{ojs}
+//| echo: false
+bsStep = bsScenario.steps[bsClampedStep]
+```
+
+```{ojs}
+//| echo: false
+{
+  const cellBox = (i) => {
+    const inRange = i >= bsStep.low && i <= bsStep.high;
+    const isMid = i === bsStep.mid;
+    const found = isMid && bsStep.desc.includes("found!");
+    let bg = "transparent", fg = "inherit", border = "1px solid var(--bs-border-color, #ccc)", opacity = 1;
+    if (!inRange) opacity = 0.35;
+    if (inRange && !isMid) { bg = "rgba(13,110,253,0.12)"; border = "1px solid #0d6efd"; }
+    if (isMid) { bg = found ? "#198754" : "#0d6efd"; fg = "white"; border = `1px solid ${bg}`; }
+    return `background:${bg}; color:${fg}; border:${border}; opacity:${opacity};`;
+  };
+  const label = (i) => {
+    if (i === bsStep.mid) return "mid";
+    if (i === bsStep.low) return "low";
+    if (i === bsStep.high) return "high";
+    return "";
+  };
+  return html`<div>
+    <div style="display:flex; gap:6px; margin: 0.5rem 0 0.25rem;">
+      ${bs_nums.map((v, i) => html`
+        <div style="display:flex; flex-direction:column; align-items:center; width:2.75rem;">
+          <div style="width:2.5rem; height:2.5rem; display:flex; align-items:center;
+                      justify-content:center; border-radius:6px; font-weight:600;
+                      font-family: var(--bs-font-monospace, monospace); ${cellBox(i)}">${v}</div>
+          <div style="font-size:0.65rem; opacity:0.6; margin-top:2px;">${label(i)}</div>
+        </div>
+      `)}
+    </div>
+    <p style="margin-top:0.75rem;"><strong>Step ${bsClampedStep + 1} / ${bsScenario.steps.length}:</strong> ${bsStep.desc}</p>
+    ${bsClampedStep === bsScenario.steps.length - 1
+      ? html`<p><strong>Result:</strong> ${bsScenario.result === -1 ? "not found (-1)" : `found at index ${bsScenario.result}`}</p>`
+      : ""}
+  </div>`;
+}
+```
+
+## Implementation
+
+```{python}
+#| echo: false
+#| output: asis
+import sys
+sys.path.insert(0, "..")
+from _lesson import lesson_markdown
+
+print(lesson_markdown("../../03_algorithm_patterns/03_binary_search.py"))
+```
+
+### Output
+
+```{python}
+#| echo: false
+from _lesson import run_output
+
+print(run_output("../../03_algorithm_patterns/03_binary_search.py"))
+```

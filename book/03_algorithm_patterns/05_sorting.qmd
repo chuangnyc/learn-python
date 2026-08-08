@@ -1,0 +1,26 @@
+---
+title: "05 · Sorting"
+---
+
+Sorting (merge sort, quick sort, comparators).
+
+## Implementation
+
+```{python}
+#| echo: false
+#| output: asis
+import sys
+sys.path.insert(0, "..")
+from _lesson import lesson_markdown
+
+print(lesson_markdown("../../03_algorithm_patterns/05_sorting.py"))
+```
+
+### Output
+
+```{python}
+#| echo: false
+from _lesson import run_output
+
+print(run_output("../../03_algorithm_patterns/05_sorting.py"))
+```

@@ -1,0 +1,26 @@
+---
+title: "01 · Stacks"
+---
+
+Stacks (LIFO).
+
+## Implementation
+
+```{python}
+#| echo: false
+#| output: asis
+import sys
+sys.path.insert(0, "..")
+from _lesson import lesson_markdown
+
+print(lesson_markdown("../../02_data_structures/01_stacks.py"))
+```
+
+### Output
+
+```{python}
+#| echo: false
+from _lesson import run_output
+
+print(run_output("../../02_data_structures/01_stacks.py"))
+```

@@ -1,0 +1,64 @@
+project:
+  type: book
+
+book:
+  title: "Learn Python (from Go)"
+  subtitle: "A hands-on Python course for Go developers"
+  chapters:
+    - index.qmd
+    - part: "01 · Python Language Essentials"
+      chapters:
+        - 01_fundamentals/01_hello.qmd
+        - 01_fundamentals/02_types_and_variables.qmd
+        - 01_fundamentals/03_strings.qmd
+        - 01_fundamentals/04_collections.qmd
+        - 01_fundamentals/05_comprehensions.qmd
+        - 01_fundamentals/06_functions.qmd
+        - 01_fundamentals/07_classes.qmd
+        - 01_fundamentals/08_iterators_generators.qmd
+        - 01_fundamentals/09_decorators.qmd
+        - 01_fundamentals/10_context_managers.qmd
+        - 01_fundamentals/11_error_handling.qmd
+        - 01_fundamentals/12_pattern_matching.qmd
+        - 01_fundamentals/13_typing.qmd
+        - 01_fundamentals/14_concurrency.qmd
+    - part: "02 · Core Data Structures"
+      chapters:
+        - 02_data_structures/01_stacks.qmd
+        - 02_data_structures/02_queues.qmd
+        - 02_data_structures/03_linked_lists.qmd
+        - 02_data_structures/04_hash_maps.qmd
+        - 02_data_structures/05_binary_trees.qmd
+        - 02_data_structures/06_heaps.qmd
+        - 02_data_structures/07_tries.qmd
+        - 02_data_structures/08_graphs.qmd
+    - part: "03 · Problem-Solving Techniques"
+      chapters:
+        - 03_algorithm_patterns/01_two_pointers.qmd
+        - 03_algorithm_patterns/02_sliding_window.qmd
+        - 03_algorithm_patterns/03_binary_search.qmd
+        - 03_algorithm_patterns/04_recursion.qmd
+        - 03_algorithm_patterns/05_sorting.qmd
+        - 03_algorithm_patterns/06_dynamic_programming.qmd
+        - 03_algorithm_patterns/07_greedy.qmd
+        - 03_algorithm_patterns/08_topological_sort.qmd
+    - part: "04 · Interview Staples"
+      chapters:
+        - 04_applied_topics/01_strings.qmd
+        - 04_applied_topics/02_intervals.qmd
+        - 04_applied_topics/03_matrix.qmd
+        - 04_applied_topics/04_bit_manipulation.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    toc: true
+    code-copy: true
+    code-tools: true
+    number-sections: false
+
+execute:
+  freeze: auto
+  error: true

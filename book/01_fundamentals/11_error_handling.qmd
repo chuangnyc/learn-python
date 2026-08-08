@@ -1,0 +1,26 @@
+---
+title: "11 · Error Handling"
+---
+
+Exceptions, custom errors, and EAFP vs LBYL.
+
+## Implementation
+
+```{python}
+#| echo: false
+#| output: asis
+import sys
+sys.path.insert(0, "..")
+from _lesson import lesson_markdown
+
+print(lesson_markdown("../../01_fundamentals/11_error_handling.py"))
+```
+
+### Output
+
+```{python}
+#| echo: false
+from _lesson import run_output
+
+print(run_output("../../01_fundamentals/11_error_handling.py"))
+```

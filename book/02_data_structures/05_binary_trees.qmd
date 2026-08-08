@@ -1,0 +1,26 @@
+---
+title: "05 · Binary Trees"
+---
+
+Binary trees (traversal, BST, balancing).
+
+## Implementation
+
+```{python}
+#| echo: false
+#| output: asis
+import sys
+sys.path.insert(0, "..")
+from _lesson import lesson_markdown
+
+print(lesson_markdown("../../02_data_structures/05_binary_trees.py"))
+```
+
+### Output
+
+```{python}
+#| echo: false
+from _lesson import run_output
+
+print(run_output("../../02_data_structures/05_binary_trees.py"))
+```

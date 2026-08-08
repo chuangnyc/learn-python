@@ -1,0 +1,26 @@
+---
+title: "03 · Strings"
+---
+
+f-strings, slicing, and common string methods.
+
+## Implementation
+
+```{python}
+#| echo: false
+#| output: asis
+import sys
+sys.path.insert(0, "..")
+from _lesson import lesson_markdown
+
+print(lesson_markdown("../../01_fundamentals/03_strings.py"))
+```
+
+### Output
+
+```{python}
+#| echo: false
+from _lesson import run_output
+
+print(run_output("../../01_fundamentals/03_strings.py"))
+```

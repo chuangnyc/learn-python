@@ -1,0 +1,26 @@
+---
+title: "08 · Graphs"
+---
+
+Graphs (adjacency list, BFS/DFS).
+
+## Implementation
+
+```{python}
+#| echo: false
+#| output: asis
+import sys
+sys.path.insert(0, "..")
+from _lesson import lesson_markdown
+
+print(lesson_markdown("../../02_data_structures/08_graphs.py"))
+```
+
+### Output
+
+```{python}
+#| echo: false
+from _lesson import run_output
+
+print(run_output("../../02_data_structures/08_graphs.py"))
+```

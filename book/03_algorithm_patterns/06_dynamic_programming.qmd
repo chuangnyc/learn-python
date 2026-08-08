@@ -1,0 +1,26 @@
+---
+title: "06 · Dynamic Programming"
+---
+
+Dynamic programming (memoization, tabulation).
+
+## Implementation
+
+```{python}
+#| echo: false
+#| output: asis
+import sys
+sys.path.insert(0, "..")
+from _lesson import lesson_markdown
+
+print(lesson_markdown("../../03_algorithm_patterns/06_dynamic_programming.py"))
+```
+
+### Output
+
+```{python}
+#| echo: false
+from _lesson import run_output
+
+print(run_output("../../03_algorithm_patterns/06_dynamic_programming.py"))
+```

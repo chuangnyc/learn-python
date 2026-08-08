@@ -1,0 +1,26 @@
+---
+title: "02 · Types and Variables"
+---
+
+Dynamic typing, type hints, and mutability.
+
+## Implementation
+
+```{python}
+#| echo: false
+#| output: asis
+import sys
+sys.path.insert(0, "..")
+from _lesson import lesson_markdown
+
+print(lesson_markdown("../../01_fundamentals/02_types_and_variables.py"))
+```
+
+### Output
+
+```{python}
+#| echo: false
+from _lesson import run_output
+
+print(run_output("../../01_fundamentals/02_types_and_variables.py"))
+```

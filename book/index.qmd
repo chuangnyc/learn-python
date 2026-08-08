@@ -1,0 +1,22 @@
+---
+title: "Learn Python (from Go)"
+---
+
+A hands-on Python course for developers coming from Go. Each chapter renders one
+self-contained exercise from the repo — narrative alongside the actual source code
+and its printed output.
+
+If you already write Go, you know static typing, interfaces, goroutines, and
+explicit error handling. This course focuses on where Python diverges: dynamic
+typing, duck typing, generators, decorators, comprehensions, and the patterns that
+make idiomatic Python feel very different from idiomatic Go. Where a Go comparison
+clarifies a concept, we draw the parallel directly.
+
+This book is for reading. To practice, run the exercises directly:
+
+```bash
+python3 01_fundamentals/01_hello.py
+```
+
+Every file also works as a debug target in your editor, exactly as if this book
+didn't exist.
